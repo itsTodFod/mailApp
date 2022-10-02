@@ -109,7 +109,18 @@ fun ReplyListAndDetailContent(
 
 
 //3. Load Profile Image
-
+@Composable
+fun ReplyProfileImage(
+    @DrawableRes drawableResource: Int,
+    description: String,
+    modifier: Modifier = Modifier
+){
+    Image(
+        modifier = modifier.clip(CircleShape),
+        painter = painterResource(drawableResource),
+        contentDescription = description
+    )
+}
 
 /**
  * Component that displays Reply logo

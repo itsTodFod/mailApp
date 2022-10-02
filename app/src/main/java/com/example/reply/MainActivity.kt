@@ -48,7 +48,7 @@ class MainActivity : ComponentActivity() {
                 val windowSize = calculateWindowSizeClass(this)
 
                 //2. Set AppContent
-                
+                ReplyApp(windowSize = windowSize.widthSizeClass)
 
 
             }
@@ -58,6 +58,13 @@ class MainActivity : ComponentActivity() {
 
 
 //1. Build a Preview
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun ReplyAppCompactPreview(){
+    ReplyTheme() {
+        ReplyApp(windowSize = WindowWidthSizeClass.Compact)
+    }
+}
 
 
 
